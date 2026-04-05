@@ -1,0 +1,9 @@
+site:com ethical hacking
+site:com inurl:https ethical hacking
+site:com -inurl:https ethical hacking
+filetype:pdf ethical hacking notes
+filetype:xlsx budget 2026
+site:gov filetype:xlsx budget 2026
+before:2025 football
+after:2025 football
+intitle:phishing site:gov
