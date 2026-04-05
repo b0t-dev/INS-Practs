@@ -1,0 +1,21 @@
+
+nmap
+nmap -sL 192.168.20.244                    1. -sL: Lists the target hosts and checks whether they are active or inactive
+nmap -sL www.siesascs.edu.in      
+nmap -sV www.siesascs.edu.in               2. -sV: Detects the service version running on open ports.
+nmap -p 22,80,443 192.168.20.244           3. -p: Scans only selected ports       
+nmap -p 1-65535 192.168.20.244             4. Scan all ports
+nmap --top-ports 10 www.siesascs.edu.in    5. --top-ports: Scans the most commonly used/top ports
+nmap -A www.siesascs.edu.in                6. -A: Performs an aggressive scan that enables OS detection, service/version detection, script scanning, and traceroute on the target host
+nmap --traceroute 192.168.20.244           7. --traceroute: Shows the network path between the scanner and the target.
+nmap -O www.siesascs.edu.in                8. -O: Detects the operating system running on the target machine.
+
+
+nmap --script ftp-vuln-cve2010-4221 -sV 192.168.20.244   9. ftp-vuln-cve2010-4221: Runs vulnerability scripts to check for known security issues. 
+nmap --script ftp-vuln-cve2010-4221 -sV www.siesascs.edu.in
+
+nmap -sA www.siesascs.edu.in                  -sA: Used to determine firewall rules.
+nmap -sS www.siesascs.edu.in                  -sS: Called half-open scan and is one of the most common scans.
+nmap -sF www.siesascs.edu.in                  -sF: Sends FIN packets to detect open ports.
+nmap -sX www.siesascs.edu.in                  -sX: Sends packets with FIN, PSH and URG flags.
+nmap -sN www.siesascs.edu.in                  -sN: Sends packets without any flags to detect open ports.
