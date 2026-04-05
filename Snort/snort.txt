@@ -1,0 +1,16 @@
+snort -W 
+
+snort -i 7 -c C:\Snort\etc\snort.conf -T
+
+
+--- Add the below four line in local.rules
+#set alert for icmp, udp and tcp
+alert icmp any any -> any any (msg: "ICMP alert test"; sid: 1000001;)
+alert udp any any -> any any (msg: "UDP alert test"; sid: 1000002;)
+alert tcp any any -> any any (msg: "TCP alert test"; sid: 1000003;)
+
+
+
+snort -i 7 -c C:\Snort\etc\snort.conf -A
+
+snort -i 7 -c C:\Snort\etc\snort.conf -A console
